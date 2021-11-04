@@ -1,0 +1,175 @@
+/*::::::::::::::::::::::::::цвета:::::::::::::::::::::::::::::::::::::::::::::::*/
+$accent:#BB1219;
+$accent-hover:#E33239;
+$accent-active:#A30209;
+$title: #212121;
+$text:#2B2B2B;
+$white: #FFF7F7;
+$bg-dark:#DFE1E3;
+$bg-light:#EBEBEB;
+$bg-menu-active:#C5CBD2;
+$line:#A2AAB2;
+
+/*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
+$row: 1;
+$row-2:2;
+$row-3:3;
+$row-4:4;
+$row-5:5;
+$row-6:6;
+$row-7:7;
+$row-8:8;
+$row-9:9;
+$row-10:10;
+/*::::::::::::::::::::::::::переменные-finish:::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::mixins::::::::::::::::::::::::::::::::::::::::::::::*/
+
+@mixin overflow($row) {
+  -webkit-line-clamp: $row;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*::::::::::::::::::::::::::mixins-finish::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::обои::::::::::::::::::::::::::::::::::::::::::::::::*/
+%bg-left {
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%bg-center-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%bg-center-contain {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*::::::::::::::::::::::::::обои-finish:::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::брекпоинты::::::::::::::::::::::::::::::::::::::::::*/
+$xxl:1728px;
+$sxl: 1578px;
+$xl: 1440px;
+$sxla: 1300px;
+$lg: 1200px;
+$mdb: 1100px;
+$md: 1025px;
+$mdl: 992px;
+$sm: 860px;
+$smx: 768px;
+$smz: 700px;
+$sms: 620px;
+$smm: 500px;
+$xss: 479px;
+$xs: 450px;
+$xxs: 400px;
+$xxsl: 330px;
+
+/*::::::::::::::::::::::::::брекпоинты-finish:::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::миксин для брейкпоинтов:::::::::::::::::::::::::::::*/
+@mixin media-w($w) {
+  @media only screen and (max-width: $w) {
+    @content;
+  }
+}
+
+/*::::::::::::::::::::::::::миксин для брейкпоинтов-finish::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::наследование для шрифтов::::::::::::::::::::::::::::*/
+
+%roboto-700 {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%roboto-500 {
+  font-family: 'Roboto-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%roboto-400 {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%inter-700 {
+  font-family: 'Inter  Bold', sans-serif;
+  font-weight: 700;
+}
+
+%inter-600 {
+  font-family: 'Inter Semi Bold', sans-serif;
+  font-weight: 600;
+}
+
+%inter-400 {
+  font-family: 'Inter Semi Bold', sans-serif;
+  font-weight: 400;
+}
+
+
+
+/*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
+/*::::::::::::::::::::::::::наследование для кнопки:::::::::::::::::::::::::::::*/
+%btn {
+  width: 240px;
+  height: 70px;
+  padding: 23px 5px;
+  background-color: $accent;
+  @extend %inter-600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $white;
+  border: 1px solid transparent;
+
+  @include media-w($md) {
+    width: 206px;
+    height: 59px;
+    font-size: 16px;
+    padding: 20px 5px;
+  }
+}
+
+%btn-hover {
+  background-color: $accent-hover;
+  color: $white;
+}
+
+%btn-active {
+  background-color: $accent-active;
+}
+
+// %checkbox-hiden {
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   position: absolute;
+// }
+
+// %radio-hidden {
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   position: absolute;
+// }
+
+/*::::::::::::::::::::::::::наследование для кнопки-finish::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::fancybox-snipet:::::::::::::::::::::::::::::::::::::*/
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+/*::::::::::::::::::::::::::fancybox-snipet-finish::::::::::::::::::::::::::::*/
