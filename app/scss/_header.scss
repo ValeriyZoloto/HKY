@@ -2,11 +2,28 @@
   padding: 30px 0px 30px 0px;
   background-color: $bg-light;
 
+  @include media-w($md) {
+    padding: 25px 0px 25px 0px;
+  }
+
+  @include media-w($smz) {
+    position: relative;
+  }
+
   &__inner {
     margin: 0px auto;
     max-width: 1720px;
     display: flex;
     align-items: center;
+
+    @include media-w($mdl) {
+      max-width: 900px;
+    }
+
+    @include media-w($smx) {
+      max-width: 678px;
+    }
+
   }
 
   &__contacts {
@@ -17,6 +34,14 @@
 
     @include media-w($md) {
       margin-right: 40px;
+    }
+
+    @include media-w($smx) {
+      margin-right: 32px;
+    }
+
+    @include media-w($smz) {
+      display: none;
     }
   }
 
@@ -37,6 +62,10 @@
 
     @include media-w($md) {
       font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
     }
 
     &::after {
@@ -63,6 +92,18 @@
 
     @include media-w($md) {
       margin-right: 0px;
+    }
+
+    @include media-w($smz) {
+      position: absolute;
+      left: 80%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    @include media-w($xs) {
+      left: 50%;
+      top: 241px;
     }
   }
 }

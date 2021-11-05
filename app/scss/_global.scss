@@ -77,6 +77,20 @@ a {
       width: 171px;
       height: 59px;
     }
+
+    @include media-w($mdl) {
+      width: 145px;
+      height: 50px;
+    }
+
+    @include media-w($xs) {
+      position: absolute;
+      left: 55%;
+      transform: translateX(-50%);
+      top: 23px;
+      width: 87px;
+      height: 30px;
+    }
   }
 
   &__header {
@@ -89,10 +103,31 @@ a {
     @include media-w($md) {
       margin-right: 40px;
     }
+
+    @include media-w($mdl) {
+      margin-right: 31px;
+    }
   }
 
   &__footer {
     margin-right: 78px;
+
+    @include media-w($lg) {
+      margin-right: 50px;
+    }
+
+    @include media-w($md) {
+      margin-right: auto;
+    }
+
+    @include media-w($smx) {
+      margin-right: 17px;
+    }
+
+    @include media-w($xs) {
+      display: block;
+      margin-right: 26px;
+    }
   }
 }
 
@@ -114,6 +149,16 @@ a {
       background-color: transparent;
       border: 1px solid transparent;
       display: none;
+
+      @include media-w($smx) {
+        top: 35px;
+        right: 57px;
+      }
+
+      @include media-w($smz) {
+        top: 25px;
+        right: 25px;
+      }
 
       &:hover {
         .menu__svg {
@@ -144,6 +189,26 @@ a {
         width: 678px;
         height: 116px;
         border: 1px solid $line;
+
+        @include media-w($smx) {
+          max-width: 678px;
+          width: 100%;
+          height: 116px;
+        }
+
+        @include media-w($smz) {
+          padding: 26px 129px;
+          max-width: 430px;
+          width: 100%;
+          height: 116px;
+        }
+
+        @include media-w($xs) {
+          padding: 26px 50px;
+          max-width: 280px;
+          width: 100%;
+        }
+
       }
     }
 
@@ -208,6 +273,30 @@ a {
     }
   }
 
+  &__footer {
+    margin-right: auto;
+
+    @include media-w($md) {
+      max-width: 391px;
+    }
+
+    @include media-w($smx) {
+      max-width: 322px;
+    }
+
+    @include media-w($smz) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media-w($xxsl) {
+      max-width: 285px;
+      top: -7px;
+    }
+  }
+
   &__header--active {
     transform: translateY(0%);
 
@@ -220,14 +309,25 @@ a {
     }
   }
 
+
+
   &__item:not(:last-child) {
     margin-right: 39px;
+
+    @include media-w($smx) {
+      margin-right: 29px;
+    }
   }
 
   &__link {
     position: relative;
     padding: 10px 0px;
     transition: 0.5s;
+
+    @include media-w($smx) {
+      font-size: 14px;
+      line-height: 1.5;
+    }
 
     &::after {
       display: block;
@@ -257,6 +357,10 @@ a {
 
     @include media-w($md) {
       margin-right: 179px;
+    }
+
+    @include media-w($mdl) {
+      margin-right: auto;
     }
   }
 }
