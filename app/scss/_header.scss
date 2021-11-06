@@ -10,6 +10,10 @@
     position: relative;
   }
 
+  @include media-w($xxsl) {
+    padding: 25px 0px 20px 0px;
+  }
+
   &__inner {
     margin: 0px auto;
     max-width: 1720px;
@@ -103,7 +107,11 @@
 
     @include media-w($xs) {
       left: 50%;
-      top: 241px;
+      top: 246px;
+    }
+
+    @include media-w($xxsl) {
+      left: 55%;
     }
   }
 }

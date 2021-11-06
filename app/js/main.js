@@ -16,8 +16,6 @@ $(function () {
 	$(".about__slider").slick({
 		centerMode: true,
 		dots: true,
-		// centerPadding: "60px",
-		// arrows: false,
 		centerMode: true,
 		variableWidth: true,
 		slidesToShow: 3,
@@ -25,5 +23,33 @@ $(function () {
 			'<button type="button" class="slick-prev"><span class="sr-only">Стрелка слайдера влево</span><svg> <use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
 		nextArrow:
 			' <button type="button" class="slick-next"><span class="sr-only">Стрелка слайдера вправо</span><svg> <use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					centerMode: false,
+					dots: true,
+				},
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					arrows: false,
+				},
+			},
+			// {
+			// 	breakpoint: 480,
+			// 	settings: {
+			// 		slidesToShow: 1,
+			// 		slidesToScroll: 1,
+			// 	},
+			// },
+			// // You can unslick at a given breakpoint now by adding:
+			// // settings: "unslick"
+			// // instead of a settings object
+		],
 	});
 });

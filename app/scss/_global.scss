@@ -17,6 +17,18 @@ body {
   overflow-y: scroll;
   @extend %roboto-400;
   background-color: $bg-dark;
+
+  @include media-w($sxla) {
+    font-size: 16px;
+  }
+
+  @include media-w($sm) {
+    font-size: 14px;
+  }
+
+  @include media-w($smz) {
+    font-size: 12px;
+  }
 }
 
 a {
@@ -57,13 +69,17 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  // @include media-w($sms) {
-  //   font-size: 40px;
-  // }
+  @include media-w($sxla) {
+    font-size: 30px;
+  }
 
-  // @include media-w($xxs) {
-  //   font-size: 32px;
-  // }
+  @include media-w($sm) {
+    font-size: 22px;
+  }
+
+  @include media-w($smz) {
+    font-size: 16px;
+  }
 }
 
 .logo {
