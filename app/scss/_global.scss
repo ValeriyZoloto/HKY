@@ -46,6 +46,19 @@ a {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include media-w($lg) {
+    max-width: 960px;
+  }
+
+  @include media-w($smx) {
+    max-width: 708px;
+  }
+
+  @include media-w($xxsl) {
+    max-width: 320px;
+  }
+
 }
 
 .sr-only {

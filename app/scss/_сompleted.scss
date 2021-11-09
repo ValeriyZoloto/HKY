@@ -1,0 +1,399 @@
+.completed {
+  padding: 127px 0 130px;
+  background-color: $bg-light;
+
+  @include media-w($md) {
+    padding: 112px 0 110px;
+  }
+
+  @include media-w($mdl) {
+    padding: 92px 0 90px;
+  }
+
+  @include media-w($smz) {
+    padding: 41px 0 100px;
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 70px;
+
+    @include media-w($md) {
+      margin-left: -10px;
+      margin-bottom: 61px;
+      letter-spacing: 0.05em;
+    }
+
+    @include media-w($mdl) {
+      margin-left: 0px;
+      margin-bottom: 50px;
+    }
+
+    @include media-w($mdl) {
+      margin-left: -30px;
+    }
+
+    @include media-w($smz) {
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+
+    @include media-w($xxsl) {
+      margin-left: 32px;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: $accent;
+
+      @include media-w($md) {
+        left: 15px;
+      }
+
+      @include media-w($smx) {
+        width: 30px;
+        top: 44%;
+        left: 31px;
+      }
+
+      @include media-w($xxsl) {
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 40px;
+
+    @include media-w($md) {
+      margin-bottom: 33px;
+    }
+
+    @include media-w($mdl) {
+      margin-bottom: 33px;
+    }
+
+    @include media-w($mdl) {
+      margin-bottom: 28px;
+    }
+
+    @include media-w($smz) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 49%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 14px 20px;
+    width: 60px;
+    height: 60px;
+    border: 3px solid $accent;
+    z-index: 9;
+    cursor: pointer;
+    transition: 0.5s;
+
+    @include media-w($md) {
+      top: 49%;
+    }
+
+    &:focus {
+      svg {
+        fill: #BDBDBD;
+      }
+    }
+
+    &:hover {
+      background-color: $accent-hover;
+    }
+
+    &:active {
+      background-color: $accent-active;
+    }
+
+    @include media-w($md) {
+      padding: 17px 17px;
+      width: 50px;
+      height: 50px;
+    }
+
+    @include media-w($sm) {
+      padding: 14px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .slick-prev {
+    left: -120px;
+
+    @include media-w($xl) {
+      left: 36px;
+    }
+
+    @include media-w($mdl) {
+      left: 30px;
+    }
+
+    @include media-w($xxsl) {
+      left: 111px;
+      top: 439px;
+    }
+
+  }
+
+  .slick-next {
+    right: -120px;
+
+    @include media-w($xl) {
+      right: 23px;
+    }
+
+    @include media-w($mdl) {
+      right: 30px;
+    }
+
+    @include media-w($xxsl) {
+      right: 79px;
+      top: 439px;
+    }
+  }
+
+  &__img {
+    @include media-w($md) {
+      max-width: 930px;
+      width: 100%;
+      height: 477px;
+    }
+
+    @include media-w($mdl) {
+      height: 347px;
+    }
+
+    @include media-w($smz) {
+      height: 248px;
+    }
+
+    @include media-w($xxsl) {
+      height: 148px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-w($md) {
+      max-width: 930px;
+    }
+
+    @include media-w($mdl) {
+      margin-left: 0px;
+    }
+
+    @include media-w($smz) {
+      flex-direction: column;
+    }
+
+    @include media-w($xxsl) {
+      margin-left: 12px;
+    }
+  }
+
+  &__info {
+    max-width: 539px;
+
+    @include media-w($smz) {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subtitle {
+    padding: 11px 33px 12px;
+    max-width: 260px;
+    height: 54px;
+    border: 1px solid $line;
+    @extend %inter-600;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: $title;
+    margin-bottom: 30px;
+
+    @include media-w($md) {
+      padding: 11px 18px 12px 35px;
+      max-width: 216px;
+      height: 48px;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include media-w($mdl) {
+      padding: 10px 23px;
+      max-width: 167px;
+      height: 39px;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+    }
+
+    @include media-w($smz) {
+      margin: 0px auto 15px;
+      max-width: 128px;
+      padding: 10px 15px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @include media-w($xxsl) {
+      height: 35px;
+      margin: 0px 0px 15px 84px;
+    }
+  }
+
+  &__info-date {
+    @extend %inter-600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $title;
+    margin-bottom: 10px;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
+  }
+
+  &__span {
+    @extend %roboto-400;
+    padding-left: 14px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #2B2B2B;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
+    }
+
+    @include media-w($mdl) {
+      padding-left: 8px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
+  }
+
+  &__info-site {
+    @extend %inter-600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $title;
+    margin-bottom: 10px;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
+  }
+
+  &__site-address {
+    @extend %roboto-400;
+    padding-left: 14px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #2B2B2B;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
+      padding-left: 8px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
+  }
+
+  &__info-address {
+    @extend %inter-600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $title;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 14px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    max-width: 540px;
+
+    @include media-w($md) {
+      max-width: 450px;
+    }
+
+    @include media-w($mdl) {
+      max-width: 324px;
+      font-size: 14px;
+    }
+
+    @include media-w($smz) {
+      max-width: 100%;
+      font-size: 12px;
+    }
+
+    @include media-w($xxsl) {
+      margin-right: -17px;
+    }
+  }
+}

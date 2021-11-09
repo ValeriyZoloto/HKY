@@ -20,12 +20,21 @@
     display: flex;
     align-items: center;
 
+    @include media-w($lg) {
+      max-width: 930px;
+    }
+
     @include media-w($mdl) {
       max-width: 900px;
     }
 
     @include media-w($smx) {
       max-width: 678px;
+    }
+
+    @include media-w($xxsl) {
+      max-width: 188px;
+      margin-left: 0px;
     }
 
   }
@@ -111,6 +120,7 @@
     }
 
     @include media-w($xxsl) {
+      top: 248px;
       left: 55%;
     }
   }

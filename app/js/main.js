@@ -40,16 +40,15 @@ $(function () {
 					arrows: false,
 				},
 			},
-			// {
-			// 	breakpoint: 480,
-			// 	settings: {
-			// 		slidesToShow: 1,
-			// 		slidesToScroll: 1,
-			// 	},
-			// },
-			// // You can unslick at a given breakpoint now by adding:
-			// // settings: "unslick"
-			// // instead of a settings object
 		],
+	});
+
+	//completed__slider
+	$(".completed__slider").slick({
+		slidesToShow: 1,
+		prevArrow:
+			'<button type="button" class="slick-prev"><span class="sr-only">Стрелка слайдера влево</span><svg> <use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+		nextArrow:
+			' <button type="button" class="slick-next"><span class="sr-only">Стрелка слайдера вправо</span><svg> <use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
 	});
 });
