@@ -1,0 +1,160 @@
+.reviews {
+  padding: 130px 0;
+  background-color: $bg-light;
+
+  @include media-w($lg) {
+    padding: 109px 0;
+  }
+
+  @include media-w($sm) {
+    padding: 93px 0px 90px 0px;
+  }
+
+  @include media-w($smz) {
+    padding: 40px 0px 40px 0px;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 100%;
+    padding-left: 80px;
+    margin-bottom: 70px;
+
+    @include media-w($lg) {
+      padding-left: 70px;
+      margin-bottom: 60px;
+    }
+
+    @include media-w($sm) {
+      padding-left: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include media-w($smz) {
+      text-align: center;
+      padding-left: 0px;
+      margin-bottom: 19px;
+      margin-left: 34px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: $accent;
+
+      @include media-w($sm) {
+        width: 30px;
+      }
+
+      @include media-w($smz) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-w($smz) {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    @include media-w($smz) {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.video {
+  position: relative;
+  display: block;
+  width: 540px;
+  flex-basis: 540px;
+  height: 340px;
+  @extend %bg-center-cover;
+  border: 1px solid transparent;
+  transition: 0.5s;
+
+  @include media-w($lg) {
+    width: 450px;
+    flex-basis: 450px;
+    height: 283px;
+  }
+
+  @include media-w($mdl) {
+    width: 387px;
+    flex-basis: 387px;
+    height: 243px;
+  }
+
+  @include media-w($sm) {
+    width: 357px;
+    flex-basis: 357px;
+    height: 224px;
+  }
+
+  @include media-w($smx) {
+    width: 324px;
+    flex-basis: 324px;
+    height: 204px;
+  }
+
+  @include media-w($smz) {
+    width: 100%;
+    height: 182px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/reviews/play-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-w($smx) {
+      background-image: url(../images/reviews/play-icon-1.png);
+    }
+
+    @include media-w($smz) {
+      background-image: url(../images/reviews/play-icon-2.png);
+    }
+  }
+
+  :focus {
+    box-shadow: 0px 0px 10px 0 $accent;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    border: solid 1px $title;
+  }
+
+  &__one {
+    background-image: url(../images/reviews/reviews-photo-1.png);
+  }
+
+  &__two {
+    background-image: url(../images/reviews/reviews-photo-2.png);
+  }
+
+}
