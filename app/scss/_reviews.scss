@@ -1,5 +1,5 @@
 .reviews {
-  padding: 130px 0;
+  padding: 132px 0px 128px 0px;
   background-color: $bg-light;
 
   @include media-w($lg) {
@@ -34,7 +34,7 @@
       text-align: center;
       padding-left: 0px;
       margin-bottom: 19px;
-      margin-left: 34px;
+      margin-left: 0px;
     }
 
     &::before {

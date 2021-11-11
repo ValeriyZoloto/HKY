@@ -1,5 +1,5 @@
 .request {
-  padding: 130px 0;
+  padding: 132px 0px 127px 0px;
 
   @include media-w($lg) {
     padding: 110px 0;
@@ -53,7 +53,7 @@
 
     @include media-w($smz) {
       font-size: 16px;
-      padding-left: 32px;
+      padding-left: 0px;
       margin: 0px auto 20px;
     }
 
@@ -68,7 +68,7 @@
       background-color: $accent;
 
       @include media-w($md) {
-        left: 13px;
+        left: 10px;
       }
 
       @include media-w($mdl) {
@@ -96,14 +96,14 @@
 
     @include media-w($smz) {
       text-align: center;
-      padding: 0px 0px 0px 32px;
+      padding: 0px;
     }
   }
 
   &__form {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     @include media-w($lg) {
       margin-bottom: 8px;
@@ -115,7 +115,7 @@
 
     @include media-w($smz) {
       flex-direction: column;
-      padding: 0px 0px 0px 16px;
+      padding: 0px;
     }
   }
 
@@ -158,6 +158,8 @@
   }
 
   &__btn {
+    padding: 22px 5px;
+
     @include media-w($lg) {
       padding: 10px 5px;
       height: 59px;
@@ -173,7 +175,7 @@
     }
 
     @include media-w($xxsl) {
-      margin: 0px 55px 0px 56px;
+      margin: 0px auto;
     }
   }
 
@@ -192,12 +194,12 @@
     @include media-w($smx) {
       position: absolute;
       right: 30%;
-      bottom: 132px;
+      bottom: 120px;
     }
 
     @include media-w($smz) {
       bottom: 107px;
-      left: 29px;
+      left: 12px;
     }
 
     &::after {

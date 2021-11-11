@@ -2,9 +2,34 @@
   padding: 133px 0 130px 0;
   background-color: $bg-dark;
 
+  @include media-w($md) {
+    padding: 111px 0 110px 0;
+  }
+
+  @include media-w($sm) {
+    padding: 91px 0 90px 0;
+  }
+
+  @include media-w($smz) {
+    padding: 41px 0 40px 0;
+  }
+
   &__top {
     display: flex;
     margin-bottom: 48px;
+
+    @include media-w($md) {
+      margin-bottom: 49px;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 51px;
+    }
+
+    @include media-w($smz) {
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
   }
 
   &__title {
@@ -12,23 +37,24 @@
     max-width: 100%;
     padding-left: 80px;
     margin-bottom: 70px;
-    margin-right: 244px;
+    margin-right: 240px;
 
     @include media-w($lg) {
       padding-left: 70px;
       margin-bottom: 60px;
+      margin-right: 223px;
     }
 
     @include media-w($sm) {
       padding-left: 50px;
       margin-bottom: 50px;
+      margin-right: 167px;
     }
 
     @include media-w($smz) {
       text-align: center;
       padding-left: 0px;
-      margin-bottom: 19px;
-      margin-left: 34px;
+      margin: 0 auto 20px;
     }
 
     &::before {
@@ -53,6 +79,10 @@
 
   &__list {
     max-width: 453px;
+
+    @include media-w($smz) {
+      padding-left: 0px;
+    }
   }
 
   &__item {
@@ -61,6 +91,10 @@
 
   &__item:not(:last-child) {
     margin-bottom: 10px;
+
+    @include media-w($xxsl) {
+      margin-bottom: 11px;
+    }
   }
 
   &__span {
@@ -69,6 +103,22 @@
     line-height: 1.3;
     color: $title;
     margin-right: 20px;
+
+    @include media-w($lg) {
+      font-size: 16px;
+      margin-right: 15px;
+      line-height: 1.2;
+    }
+
+    @include media-w($sm) {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+      margin-right: 10px;
+    }
   }
 
   &__link {
@@ -77,6 +127,18 @@
     line-height: 1.5;
     color: $text;
     transition: 0.5s;
+
+    @include media-w($lg) {
+      font-size: 16px;
+    }
+
+    @include media-w($sm) {
+      font-size: 14px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
 
     &::after {
       display: block;
@@ -98,10 +160,32 @@
   &__map {
     height: 430px;
     margin-bottom: 70px;
+
+    @include media-w($md) {
+      margin-bottom: 57px;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 48px;
+    }
+
+    @include media-w($smz) {
+      height: 360px;
+      margin-bottom: 18px;
+
+      iframe {
+        height: 360px;
+      }
+    }
   }
 
   &__bottom {
     display: flex;
+
+    @include media-w($smz) {
+      flex-direction: column;
+      padding-left: 0px;
+    }
   }
 
   &__subtitle {
@@ -116,6 +200,28 @@
     letter-spacing: 0.05em;
     color: $title;
     margin-right: 253px;
+
+    @include media-w($md) {
+      width: 187px;
+      height: 48px;
+      font-size: 20px;
+      margin-right: 214px;
+    }
+
+    @include media-w($sm) {
+      padding: 10px 5px;
+      width: 143px;
+      height: 39px;
+      font-size: 16px;
+      margin-right: 93px;
+    }
+
+    @include media-w($smz) {
+      width: 110px;
+      height: 35px;
+      margin: 0 90px 15px 91px;
+      font-size: 12px;
+    }
   }
 
   &__bottom-list {
@@ -123,6 +229,18 @@
     font-size: 20px;
     line-height: 2;
     color: $text;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($sm) {
+      font-size: 14px;
+    }
+
+    @include media-w($smz) {
+      font-size: 12px;
+    }
   }
 
   &__bottom-item {}

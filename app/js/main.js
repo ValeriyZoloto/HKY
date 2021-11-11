@@ -1,15 +1,8 @@
 $(function () {
-	//mob-menu
-	$(".burger").on("click", function () {
-		$(".menu__header").addClass("menu__header--active");
-	});
-
-	$(".menu__header-close").on("click", function () {
-		$(".menu__header").removeClass("menu__header--active");
-	});
-
+	//авто-закрытие мобильного меню
 	$(".burger, .menu__item a").on("click", function () {
-		$(".burger").toggleClass("burger--active");
+		$(".menu__header").toggleClass("menu__header--active"),
+			$(".burger").toggleClass("burger--active");
 	});
 
 	//about-slider
@@ -30,7 +23,6 @@ $(function () {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					infinite: true,
-					centerMode: false,
 					dots: true,
 				},
 			},
@@ -55,7 +47,7 @@ $(function () {
 	$(".scroll").click(function (event) {
 		console.log(11111);
 		event.preventDefault();
-		$("html").animate({ scrollTop: 0 }, 1500);
+		$("body").animate({ scrollTop: 0 }, 1500);
 	});
 
 	$(".menu a, header a").on("click", function (e) {
