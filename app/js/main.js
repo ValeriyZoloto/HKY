@@ -1,8 +1,25 @@
 $(function () {
+	//Ввод имени в инпут с большой буквы
+	document
+		.querySelector(".request__form-input--name")
+		.addEventListener("keypress", (e) => {
+			e.target.value =
+				e.target.value[0].toUpperCase() + e.target.value.slice(1);
+		});
+
 	//авто-закрытие мобильного меню
 	$(".burger, .menu__item a").on("click", function () {
-		$(".menu__header").toggleClass("menu__header--active"),
-			$(".burger").toggleClass("burger--active");
+		if (window.innerWidth <= 1440) {
+			$(".menu__header").toggleClass("menu__header--active"),
+				$(".burger").toggleClass("burger--active");
+		} else {
+			//не выполнять
+		}
+	});
+
+	$(".menu__header-close").on("click", function () {
+		$(".menu__header").removeClass("menu__header--active");
+		$(".burger").removeClass("burger--active");
 	});
 
 	//about-slider

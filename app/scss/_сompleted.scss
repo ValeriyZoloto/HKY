@@ -18,6 +18,7 @@
     position: relative;
     padding-left: 80px;
     margin-bottom: 70px;
+    @include overflow($row);
 
     @include media-w($md) {
       margin-left: -10px;
@@ -237,6 +238,7 @@
     letter-spacing: 0.05em;
     color: $title;
     margin-bottom: 30px;
+    @include overflow($row);
 
     @include media-w($md) {
       padding: 11px 18px 12px 35px;
@@ -275,6 +277,7 @@
     line-height: 1.2;
     color: $title;
     margin-bottom: 10px;
+    @include overflow($row);
 
     @include media-w($md) {
       font-size: 16px;
@@ -320,6 +323,7 @@
     line-height: 1.2;
     color: $title;
     margin-bottom: 10px;
+    @include overflow($row);
 
     @include media-w($md) {
       font-size: 16px;
@@ -342,6 +346,7 @@
     line-height: 1.5;
     color: #2B2B2B;
 
+
     @include media-w($md) {
       font-size: 16px;
     }
@@ -361,6 +366,7 @@
     font-size: 20px;
     line-height: 1.2;
     color: $title;
+    @include overflow($row);
 
     @include media-w($md) {
       font-size: 16px;
@@ -377,6 +383,7 @@
 
   &__text {
     max-width: 540px;
+    @include overflow($row-8);
 
     @include media-w($md) {
       max-width: 450px;

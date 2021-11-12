@@ -37,6 +37,7 @@
     position: relative;
     max-width: 504px;
     padding-left: 80px;
+    @include overflow($row);
 
     @include media-w($lg) {
       max-width: 400px;
@@ -119,7 +120,8 @@
     }
   }
 
-  &__form-input {
+  &__form-input,
+  .request__form-label {
     padding: 20px 30px;
     width: 405px;
     height: 70px;
@@ -155,6 +157,13 @@
         margin-bottom: 15px;
       }
     }
+  }
+
+  &__form-text {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 150%;
+    color: $accent;
   }
 
   &__btn {

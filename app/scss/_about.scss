@@ -325,6 +325,7 @@
   &__title-bottom {
     position: relative;
     padding-left: 80px;
+    @include overflow($row);
 
     @include media-w($lg) {
       padding-left: 69px;
@@ -368,6 +369,7 @@
 
   &__bottom-text {
     max-width: 730px;
+    @include overflow($row-2);
 
     @include media-w($lg) {
       max-width: 610px;
@@ -622,6 +624,7 @@
 
     &--upper {
       text-align: left;
+      @include overflow($row-3);
 
       @include media-w($lg) {
         line-height: 1.5;
